@@ -113,5 +113,29 @@
 				});
 
 			});
+		// 添加新的滚动监听功能
+			$(document).on('scroll', function() {
+				// 获取所有的 section 元素
+				var sections = $('section');
+				var scrollPosition = $(document).scrollTop();
+		
+				sections.each(function() {
+					var currentSection = $(this);
+					// 获取每个 section 相对于文档顶部的位置
+					var sectionTop = currentSection.offset().top;
+		
+					// 检查用户滚动到的位置
+					if (scrollPosition >= sectionTop - 50) { // 50 是为了提供一些缓冲
+						// 获取当前 section 的 id
+						var id = currentSection.attr('id');
+		
+						// 移除所有 nav 链接的 'active' 类
+						$('#nav ul li a').removeClass('active');
+						
+						// 给对应的 nav 链接添加 'active' 类
+						$('#nav ul li a[href="#' + id + '"]').addClass('active');
+					}
+				});
+			});
 
 })(jQuery);

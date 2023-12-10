@@ -31,10 +31,89 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	color: #333; /* 深色文字，适用于白天模式 */
+}
+
+a:link {
+    color: #800080; /* 紫色 */
+}
+
+a:visited {
+    color: #800080;
+}
+
+a:hover {
+    color: #a74dbf;
+}
+
+a:active {
+    color: #dab2f7;
+}
+
+#main p {
+    color: #555;
 }
 
 ol, ul {
 	list-style: none;
+}
+
+#pubs h3 {
+    color: #504f4f; /* This is a light grey that will appear as off-white */
+    font-weight: bold; /* This will make the text bold */
+}
+
+#header .inner {
+    text-align: center;
+}
+
+#header nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center; /* 保持居中对齐 */
+}
+
+#header nav ul li {
+    display: block;
+    margin: 0.2em 0; /* 恢复垂直间距 */
+}
+
+#header nav ul li a {
+    color: #b1b1b1;
+	border-bottom: none; /* 确保没有边框线 */
+    text-decoration: none;
+    padding: 0.3em 0.5em; /* 为链接添加一些内边距 */
+    display: block; /* 使得 <a> 标签占满整个 <li> */
+    margin: auto; /* 水平方向上居中对齐 */
+    max-width: 200px; /* 限制最大宽度，根据你名字的实际宽度进行调整 */
+}
+
+#header nav ul li a.active {
+    background-color: #6c2c6c; /* 激活条目的背景颜色 */
+    color: white;
+    border-radius: 5px; /* 可选：为背景添加圆角 */
+}
+
+#header h3 {
+    font-size: 0.9em; /* 将字体大小调整为原来的0.9倍 */
+    color: #dbdada !important; /* 较暗的颜色，你可以根据需要调整这个值 */
+}
+
+
+.work-item img {
+    display: block;
+    max-width: 100%;  /* Image will never be wider than its container */
+    max-height: 300px;  /* Fix the maximum height for all images */
+	min-height: 300px;
+    width: auto;  /* Maintain the aspect ratio */
+    height: auto;  /* Maintain the aspect ratio */
+    object-fit: cover;  /* Cover the area, clip the image if necessary */
+    object-position: center;  /* Center the image within the element */
+}
+
+
+.news-item.special-event p {
+    font-style: italic; /* 斜体字 */
 }
 
 blockquote, q {
@@ -115,11 +194,11 @@ input, select, textarea {
 		text-decoration: none;
 	}
 
-		a:hover {
+		/* a:hover {
 			border-bottom-color: transparent;
 			color: #49bf9d !important;
 			text-decoration: none;
-		}
+		} */
 
 	strong, b {
 		color: #787878;
